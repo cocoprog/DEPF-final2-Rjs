@@ -46,7 +46,6 @@ header {
 }
 
 .cart-widget {
-  color: white;
   padding: .3rem;
   border-radius: .3rem;
   display: inline-block;
@@ -56,6 +55,8 @@ header {
 .cart-icon {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(216deg) brightness(103%) contrast(103%);
 }
+
+.cart-widget label { color: white; }
 
 /* content */
 
