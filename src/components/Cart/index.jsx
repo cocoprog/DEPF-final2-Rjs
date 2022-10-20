@@ -37,34 +37,34 @@ export function Cart () {
   return (
     <section className="shopping-cart">
       {data.map(article => (
-        <article class="cart-item">
-          <div class="item-actions">
-            <span class="delete-btn"></span>
+        <article className="cart-item" key={article.id}>
+          <div className="item-actions">
+            <span className="delete-btn"></span>
           </div>
 
-          <div class="item-photo">
+          <div className="item-photo">
             <img src={article.image} alt={article.title} />
           </div>
 
-          <div class="item-description">
+          <div className="item-description">
             <span>{article.title}</span>
             <span>{article.price}</span>
             <span>{article.description}</span>
           </div>
 
-          <div class="item-quantity">
-            <button class="plus-btn" type="button" name="button">
+          <div className="item-quantity">
+            <button className="plus-btn" type="button" name="button">
               {/* <img src="plus.svg" alt="" /> */}
               mas
             </button>
-            <input type="text" name="name" value="1" />
-            <button class="minus-btn" type="button" name="button">
+            {/* <input type="text" name="name" value="1" /> */}
+            <button className="minus-btn" type="button" name="button">
               {/* <img src="minus.svg" alt="" /> */}
               menos
             </button>
           </div>
 
-          <div class="total-price">$349</div>
+          <div className="total-price">$349</div>
         </article>
       ))}
     </section>
