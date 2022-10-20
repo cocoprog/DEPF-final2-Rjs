@@ -7,13 +7,13 @@ export function ItemListContainer () {
 
     const { category } = useParams();
     const [productList, setProductList] = useState([])
-
+    
     useEffect(() => {
         getProducts
-            .then((response)=>{ setProductList(response); })
-            .catch(error => console.log(error));
-    }, []);
-
+        .then((response)=>{ setProductList(response); })
+        .catch(error => console.log(error));
+    }, [category]);
+    
     const getProducts = new Promise ((resolve, reject) => {
         setTimeout(() => {
             if (category) {
@@ -23,6 +23,6 @@ export function ItemListContainer () {
             }
         }, 2000);
     });
-
+    
     return <ItemList lista={productList}/>
 }
